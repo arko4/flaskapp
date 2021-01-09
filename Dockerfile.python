@@ -1,0 +1,10 @@
+FROM python
+RUN pip install flask flask-cors json_logging
+
+WORKDIR /app
+COPY app.py .
+ENV FLASK_RUN_PORT=5000
+ENV FLASK_ENV=production
+
+ENTRYPOINT [ "python" ]
+CMD [ "app.py" ]
