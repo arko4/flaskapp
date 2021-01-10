@@ -40,12 +40,12 @@ pipeline {
       }
     }
 
-    stage('Clean') {
-      steps{
-        sh "docker rmi $imagename:$BUILD_NUMBER"
-         sh "docker rmi $imagename:latest"
-      }
-    }
+//    stage('Clean') {
+//      steps{
+//        sh "docker rmi $imagename:$BUILD_NUMBER"
+//         sh "docker rmi $imagename:latest"
+//      }
+//    }
 
     stage ('Deploy') {
       steps {
