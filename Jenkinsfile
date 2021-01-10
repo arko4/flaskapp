@@ -6,7 +6,9 @@ pipeline {
     dockerImage = ''
   }
 
-  agent label 'dockerhost-label'
+  agent {
+    label 'dockerhost-label'
+  }
 
   stages {
     stage('Build') {
