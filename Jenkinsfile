@@ -19,6 +19,16 @@ pipeline {
       }
     }
 
+    stage('Test') {
+      steps{
+        script {
+          dockerImage.inside {
+            sh '/bin/true'
+          }
+        }
+      }
+    }
+
     stage('Push') {
       steps{
         script {
