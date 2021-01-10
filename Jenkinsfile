@@ -22,7 +22,7 @@ pipeline {
     stage('Test') {
       steps{
         script {
-          dockerImage.inside("--entrypoint /bin/bash") {
+          dockerImage.inside {
             sh '/bin/true'
           }
         }
