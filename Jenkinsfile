@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    imagename = "devopstestaccount/api"
+    imagename = "arko4/api"
     registryCredential = 'devopstestaccount-id'
     dockerImage = ''
   }
